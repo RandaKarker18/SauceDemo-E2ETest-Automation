@@ -1,0 +1,61 @@
+# =========================
+# Java / Maven / Selenium
+# =========================
+
+# Maven target directory
+target/
+
+# Maven build output
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs and reports
+*.log
+logs/
+report/
+reports/
+
+
+
+# Cucumber reports & screenshots
+cucumber.json
+cucumber-html-reports/
+screenshots/
+videos/
+
+# Surefire / TestNG reports
+surefire-reports/
+test-output/
+
+# JUnit reports
+junit-reports/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+.DS_Store
+Thumbs.db
+
+
+# Eclipse
+.project
+.classpath
+.settings/
+.mvn/
+
+
+# OS-specific files
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Environment & credentials
+*.properties
+*.env
+*.secret
+
+
+
