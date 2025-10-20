@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = { "src/test/resources/features" }, plugin = { "pretty",
-		"html:target/report/cucumber-report.html", "json:target/report/cucumber.json" }, tags = (" @AddToCart"),
+		"html:target/report/cucumber-report.html", "json:target/report/cucumber.json" }, tags = (""),
 
 		glue = { "com.automation.e2eTests" },
 
