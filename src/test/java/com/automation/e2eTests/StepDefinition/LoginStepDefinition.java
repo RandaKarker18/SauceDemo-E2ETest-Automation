@@ -1,7 +1,7 @@
 package com.automation.e2eTests.StepDefinition;
 
-import com.automation.e2eTests.pageObjects.HomePage;
 import com.automation.e2eTests.pageObjects.LoginPage;
+import com.automation.e2eTests.pageObjects.ProductCatalogPage;
 import com.automation.e2eTests.utils.Validations;
 
 import io.cucumber.java.en.Given;
@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 public class LoginStepDefinition {
 
 	private LoginPage loginPage;
-	private HomePage homePage;
+	private ProductCatalogPage productCatalog;
 	private Validations validation;
 
 	public LoginStepDefinition() {
@@ -22,7 +22,7 @@ public class LoginStepDefinition {
 	public void iNavigateToTheSauceLabsWebsite() {
 		// Le driver est initialisé par Hooks @Before
 		loginPage = new LoginPage(); // Création après que le driver soit prêt
-		homePage = new HomePage();
+		productCatalog = new ProductCatalogPage();
 		loginPage.openLoginPage();
 	}
 
@@ -44,7 +44,7 @@ public class LoginStepDefinition {
 	@Then("I am redirected to the Home page {string}")
 	public void iAmRedirectedToTheHomePage(String expectedTitle) {
 		if (expectedTitle != null && !expectedTitle.trim().isEmpty()) {
-			validation.assertEquals(homePage.getProductLabel(), expectedTitle);
+			validation.assertEquals(productCatalog.getProductLabel(), expectedTitle);
 		}
 	}
 

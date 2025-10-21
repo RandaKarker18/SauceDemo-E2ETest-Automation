@@ -15,7 +15,7 @@ public class SelectFromListUtils {
 	 * @param element element to be selected
 	 * @param text    The exactly displayed text of a particular option
 	 */
-	public void selectDropDownListByVisibleText(WebElement element, String text) {
+	public static void selectDropDownListByVisibleText(WebElement element, String text) {
 		Select dropDownList = new Select(element);
 		dropDownList.selectByVisibleText(text);
 	}
@@ -27,7 +27,7 @@ public class SelectFromListUtils {
 	 * @param element element to be selected
 	 * @param index   the index of the option to be selected
 	 */
-	public void selectDropDownListByIndex(WebElement element, int index) {
+	public static void selectDropDownListByIndex(WebElement element, int index) {
 		Select dropDownList = new Select(element);
 		dropDownList.selectByIndex(index);
 	}
@@ -39,8 +39,13 @@ public class SelectFromListUtils {
 	 * @param element element to be selected
 	 * @param value   value of the “value” attribute
 	 */
-	public void selectDropDownListByValue(WebElement element, String value) {
+	public static void selectDropDownListByValue(WebElement element, String value) {
 		Select dropDownList = new Select(element);
 		dropDownList.selectByValue(value);
+	}
+
+	public static String getSelectedOption(WebElement element) {
+		Select dropDownList = new Select(element);
+		return dropDownList.getFirstSelectedOption().getText();
 	}
 }
